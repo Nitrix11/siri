@@ -14,12 +14,24 @@
             siri
         </h1>
     </div>
+    <ul class="ul">
+        <li ><a href="#banner">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ourservices">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+</div>
+
+<div class="popup-menu" id="popupMenu">
     <ul>
         <li ><a href="#banner">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#ourservices">Services</a></li>
         <li><a href="#contact">Contact Us</a></li>
     </ul>
+</div>
 </nav>
     </section>
     <section id="banner">
@@ -33,8 +45,8 @@
         Expert Appliance Repair Services <br>You Can Trust
     </h1>
 
-    <p>Get your home appliances fixed quickly and efficiently by our experienced technicians</p>
-    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Get your home appliances fixed quickly and efficiently by <br>our experienced technicians</p>
+
     <div class="buttons">
         <button>
             Read More 
@@ -48,19 +60,10 @@
     </section>
     <section id="banner2">
 <div class="wrapper">
-<div class="card">
-<div class="pic">
-<h1>👩🏽‍🔧</h1>
-</div>
-<div class="text">
-    <h1>
-        Handyman
-    </h1>
-</div>
-</div>
+
 <div class="card">
   <div class="pic">
-<h1>🦸🏽</h1>
+<h1><img src="./images/mechanic.png" alt=""></h1>
   </div>
   <div class="text">
     <h1>
@@ -77,10 +80,10 @@
     About Us
 </h3>
 <h1>
-    We Provide Cost Effective Solution For You.
+    Our mission
 </h1>
 <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, atque reiciendis natus rem exercitationem explicabo nemo harum qui <br>repellat, nulla quo laboriosam quae nihil assumenda  officia dolore facere temporibus.
+    At Siri Appliance Repair, we pride ourselves on delivering exceptional repair services for your home appliances. Our team of expert technicians is dedicated to providing prompt, reliable, and affordable solutions to get your appliances up and running in no time.
 </p>
 <div class="two">
   <div class="two1">
@@ -323,15 +326,7 @@
                        <div class="pic">
                         <img src="./images/fd32ec1b-8cc0-49d5-aa21-59957a1b5039 (1).jpeg" class="s2">
                     </div>
-                    <div class="text">
-                        <div class="24">
-                            <h2>24</h2>
-                        </div>
-                        <div class="2020">
-                            <p>2020</p>
-                            <p>january</p>
-                        </div>
-                       </div>
+                
                        </div> 
                      
                     <div class="card-body">
@@ -347,15 +342,7 @@
                         <div class="pic">
                             <img src="./images/15473679-cd71-4496-880a-236626661288.jpeg" alt="" class="s2">
                      </div>
-                     <div class="text">
-                         <div class="24">
-                             <h2>24</h2>
-                         </div>
-                         <div class="2020">
-                             <p>2025</p>
-                             <p>january</p>
-                         </div>
-                        </div>
+                 
                         </div> 
                     <div class="card-body">
                         <h1> Not Following Safety Precautions</h1>
@@ -372,15 +359,7 @@
                         <div class="pic">
                          <img src="./images/15473679-cd71-4496-880a-236626661288.jpeg" alt="" class="s2">
                      </div>
-                     <div class="text">
-                         <div class="24">
-                             <h2>24</h2>
-                         </div>
-                         <div class="2020">
-                             <p>2020</p>
-                             <p>january</p>
-                         </div>
-                        </div>
+                    
                         </div> 
                     <div class="card-body">
                         <h1> Not Turning Off the Power</h1>
@@ -499,4 +478,14 @@
     
     
 </body>
+<script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+        const popupMenu = document.getElementById('popupMenu');
+        if (popupMenu.style.display === 'block') {
+            popupMenu.style.display = 'none'; // Hide menu
+        } else {
+            popupMenu.style.display = 'block'; // Show menu
+        }
+    });
+</script>
 </html>

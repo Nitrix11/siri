@@ -5,7 +5,60 @@
     scroll-behavior: smooth;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#nav{
+#nav{#nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+}
+
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Adjust based on nav height */
+    right: 15px;
+    background-color: #333;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.popup-menu ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.popup-menu li {
+    padding: 10px 20px;
+}
+
+.popup-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.popup-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .popup-menu {
+        display: none; /* Ensure it's hidden */
+    }
+}
     nav{
         position: absolute;
         top: 0;
@@ -115,7 +168,12 @@ font-size: 45px;
             border:15px 0;
             .pic{
                 h1{
-                    font-size:50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   img{
+                    width: 30%;
+                   }
                     
                 }
             }
@@ -125,7 +183,7 @@ font-size: 45px;
 
         }
         .card:hover{
-            background-color:black;
+            background-color:rgb(56, 56, 56);
           .text{
             color:
                 #fff;
@@ -650,4 +708,306 @@ footer {
       text-decoration: underline;
     }
   }
-  
+  @media (max-width:425px) {
+    
+#banner{
+    position: relative;
+    background: url(./images/Premium\ Photo\ _\ Home\ appliances\ isolated\ on\ white\ 3d\ illustration.jpeg);
+    height: 100vh;
+    width: 100%;
+background-size: cover;
+ background-position: center;
+    background-repeat: no-repeat;
+    .wrapper{
+        background-color:rgba(0, 0, 0, 0.753);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pic{
+            border-radius: 70px;
+            display: none;
+           margin: 100px;
+            /* background: url(./images/f6fb3bcc-e5d0-47b0-b79b-a32cbcff0a31.jpeg); */
+           height: 40vh;
+           background-repeat: no-repeat;
+           width: 30%;
+           background-size: contain;
+     
+        img{
+
+            border-radius: 500px;
+            border: 5px solid black;
+        }
+        }
+
+        .text{
+            width: 100%;
+            color: #fff;
+            h1{
+font-size: 25px;
+
+            }
+            .buttons{
+                margin-top: 20px;
+                display: flex;
+                text-align:center;
+                gap: 50px;
+                width:100%;
+                button{
+                    background-color:black;
+                    color:#fff;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+#about{
+    flex-direction: column;
+}
+  }
+
+@media (max-width: 1080px) {
+    #nav ul {
+        gap: 15px; /* Reduce gap */
+    }
+
+    #banner .text h1 {
+        font-size: 35px; /* Reduce font size */
+    }
+
+    #about .text h1 {
+        font-size: 35px; /* Reduce font size */
+    }
+
+    #about .text h3 {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    #ourservices .text h2 {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    #blog h2 {
+        font-size: 36px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 425px) {
+    #nav{
+        .ul{
+            display: none;
+        }
+    }
+    #banner .wrapper {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    #banner .text h1 {
+        font-size: 25px; /* Further reduce font size */
+    }
+
+    #about{.wrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    .text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h1{
+            font-size: 20px
+        }
+.two{
+    flex-direction: column;
+
+}
+
+    }
+}}
+
+    #about .text {
+        width: 100%; /* Reduce width */
+
+    }
+   
+    #ourservices .wrapper .text{
+        h2{
+            font-size: 20px;
+        }
+    }
+    #ourservices .main {
+        flex-direction: column; /* Stack service cards */
+        align-items: center; /* Center items */
+    }
+
+    #ourservices .cards {
+        width: 100%; /* Full width */
+        gap: 30px; /* Reduce gap */
+    }
+    /* #testmonials .main .cards{
+        flex-wrap: wrap;
+    } */
+
+    #testmonials .main .cards {
+        flex-direction: column; /* Stack testimonials */
+        align-items: center; /* Center items */
+    }
+    #testmonials .main .cards .card{
+        width: 100%;
+    }
+    #blog  .cards {
+        
+        flex-direction: column; /* Stack blog cards */
+        align-items: center; /* Center items */
+    }
+    #blog .main .cards .card{
+        width: 100%;
+    }
+    #contact .text {
+        width: 100%; /* Full width */
+        font-size: 20px; /* Reduce font size */
+    }
+    .news{
+        margin-bottom: 40px;
+        display: flex;
+       width: 100%;
+    align-items: center;
+        background-image: url(./images/Premium\ Photo\ _\ Home\ appliances\ isolated\ on\ white\ 3d\ illustration.jpeg);
+        .main{
+            background-color: #000000c4;
+            width: 100%;
+            height: 30vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        padding: 50px ;
+    
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: #fff;
+    }
+    input{
+        padding: 10px 40px;
+    }
+    button{
+        padding: 10px 20px;
+        background-color: #000000a6;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+    }
+    button:hover{
+        padding: 10px 20px;
+        background-color: #14161256;
+        border: none;
+        border-radius: 6px;
+        color:#F6D148;
+    }
+    }
+    }
+    #contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text{
+            text-align: center;
+         
+            h1{
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+    }
+
+    #contact .form {
+        width: 90%; /* Reduce width */
+    }
+    
+    .form{
+        display: flex;
+    
+        flex-direction: column;
+        button{
+            margin-top: 10px;
+            background: rgb(0, 0, 0);
+            padding: 7px 20px;
+            font-weight: 900; 
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+         }
+         button:hover{
+            background-color:rgb(54, 54, 54);
+         }
+
+        input{
+            padding: 10px 40px;
+        }
+        .Massage{
+            padding: 10px 40px;
+        }
+    }
+
+    #whychooseus{
+        .wrapper{
+            flex-direction: column;
+            .text{
+                text-align: center;
+            }
+        }
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 15px; /* General font size reduction */
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 320px) {
+    #nav ul {
+        flex-direction: column; /* Stack navigation items */
+        gap: 10px; /* Reduce gap */
+    }
+
+    #banner .text h1 {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    #about .text h1 {
+        font-size: 28px; /* Further reduce font size */
+    }
+
+    #about .text h3 {
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    #ourservices .text h2 {
+        font-size: 28px; /* Further reduce font size */
+    }
+
+    #blog h2 {
+        font-size: 30px; /* Further reduce font size */
+    }
+
+    #contact .text {
+        font-size: 18px; /* Further reduce font size */
+        text-align: center;
+        h1{
+            font-size: 22px;
+        }
+    }
+}
